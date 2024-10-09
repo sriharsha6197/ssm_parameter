@@ -15,6 +15,16 @@ variable "parameters" {
       name  = "prod.rds.master_password"
       type  = "SecureString"
       value = "Harsha123"
+    },
+    {
+      name  = "prod.expense.frontend.backend_url"
+      type  = "String"
+      value = "http://prod.backend.harsha.shop/"
+    },
+    {
+      name = "prod.rds.endpoint",
+      type = "String",
+      value = "prod-rds.cluster-chgkeqmsanua.us-east-1.rds.amazonaws.com"
     }
   ]
 }
