@@ -3,4 +3,5 @@ resource "aws_ssm_parameter" "foo" {
   name = each.value.name
   type = each.value.type
   value = each.value.value
+  overwrite = true
 }
