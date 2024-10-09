@@ -1,6 +1,6 @@
 resource "aws_ssm_parameter" "foo" {
-  count = length(var.parameters)
-  name = var.parameters[count.index].name
-  type = var.parameters[count.index].type
-  value = var.parameters[count.index].value
+  for_each = { for param in var.parameters : param.name => param }
+  name = each.value.name
+  type = each.value.type
+  value = each.value.value
 }
