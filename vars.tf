@@ -25,6 +25,16 @@ variable "parameters" {
       name = "prod.rds.endpoint",
       type = "String",
       value = "prod-rds.cluster-chgkeqmsanua.us-east-1.rds.amazonaws.com"
+    },
+    {
+      name = "expense.prometheus.username",
+      type = "String",
+      value = "admin"
+    },
+    {
+      name = "expense.prometheus.password",
+      type = "SecureString",
+      value = "admin"
     }
   ]
 }
